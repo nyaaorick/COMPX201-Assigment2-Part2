@@ -2,14 +2,13 @@
 
 Author: 20233006416
 
--------------------
 Short Description
 -------------------
 This program implements a Binary Search Tree (BST) and a command-line Computer Science dictionary application as part of COMPX201 Assignment 2 - Part 2
 
 Part Two builds upon this to create a dictionary (`DictionaryBST.java` and `DictionaryLookup.java`) that can load terms and definitions from a file, and allows users to search, add, remove, and print dictionary entries.
 
--------------------
+
 Files Included
 -------------------
 Core Java Files:
@@ -20,7 +19,7 @@ Supporting Files:
 * dictionary.txt: A sample dictionary file containing terms and definitions. This file is expected by `DictionaryLookup.java`.
 
 
--------------------
+
 Dictionary Features (Part Two - DictionaryLookup)
 -------------------
 The `DictionaryLookup` program allows the user to:
@@ -31,7 +30,7 @@ The `DictionaryLookup` program allows the user to:
 5.  Print all words/phrases and their definitions in alphabetical order.
 6.  Exit the application.
 
--------------------
+
 How to Run
 -------------------
 After successful compilation, run the dictionary application from the same directory using:
@@ -40,7 +39,7 @@ java DictionaryLookup
 
 The program will then load the `dictionary.txt` file and present a menu of options.
 
--------------------
+
 Assumptions / Notes
 -------------------
 * The `dictionary.txt` file must be present in the same directory where the `java DictionaryLookup` command is executed for the program to load the initial dictionary data successfully.
@@ -50,4 +49,3 @@ Assumptions / Notes
     * Definitions that span multiple lines within an entry block will be concatenated into a single definition string (with internal newlines replaced by spaces).
 * If a duplicate word is inserted via the "Add" functionality, its definition will be updated.
 
--------------------
