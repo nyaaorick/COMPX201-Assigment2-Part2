@@ -1,0 +1,25 @@
+ASCII: Pronounced ass-key. Stands for the American Standard Code for Information Interchange. It is a 7bit code for characters. For example, the letter 'x' is represented as 1111000. Because it is only 7 bits long, an ASCII character can be stored in a byte.
+
+Abstraction: Removing detail of something to focus on a subset of the features without confusing details.
+
+Address: a) A location in memory or identifying a particular piece of memory. b) An identification that allows access to something such as an internet address which allows one to access a device on the internet.
+
+Algorithm: A set of instructions for accomplishing a task that when executed will terminate.
+
+Analog: Measured in continuous values. The audio signal from a microphone is analog. A clock with hands is considered analog.
+
+Application: A runnable program that provides some service.
+
+Argument: One of the pieces of data provided as input to a procedure or function through the call to the procedure or function.
+
+Artificial Intelligence: The subfield of computer science that involves the creation of programs that attempt to do what was formerly believed to only be able to be done by humans.
+
+Assignment: This stores a value in a variable. An assignment statement has an assignment in it describing the storage of values in variables.
+
+Autonomous: Controlled by computer programs and not people.
+
+Bandwidth: Refers to the volume of information that can be transmitted or processed. It is usually measured in bits or bytes per time unit like "bits per second".
+
+Big Data: The problem beginning in the 21st century of processing vast amounts of data coming at or refreshing at very high speed. For example satellite sensor data, city monitoring sensors, gene sequencing data, etc.
+
+Binary: The base 2 number system. Integer can be encoded as binary which is a string of 0's and 1's. Binary is a place-value system in which each bit position denotes a power of 2 (unlike decimal which uses 10 symbols and powers of 10). k bits of information can represent 2k different numbers. For example counting in 3 bits of binary you can count from 0 to 7, 000, 001, 010, 011, 100, 101, 110, 111.
