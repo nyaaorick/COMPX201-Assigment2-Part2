@@ -1,7 +1,7 @@
 // DictionaryLookup.java
 import java.io.IOException;
 import java.util.Scanner;
-import java.nio.charset.StandardCharsets; // 推荐保留，确保编码正确性
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -42,14 +42,14 @@ public class DictionaryLookup {
     //user gui
     public void displayMenu() {
         System.out.println("------------------------------------------");
-        System.out.println("        (1) 在词典中搜索单词/短语");
-        System.out.println("        (2) 打印给定单词/短语及其定义");
-        System.out.println("        (3) 向词典中添加单词/短语和定义");
-        System.out.println("        (4) 从词典中删除单词/短语和定义");
-        System.out.println("        (5) 按字母顺序打印所有单词/短语及其定义");
+        System.out.println("        (1) search word/phrase");
+        System.out.println("        (2) print word/phrase and its definition");
+        System.out.println("        (3) add word/phrase and its definition");
+        System.out.println("        (4) remove word/phrase and its definition");
+        System.out.println("        (5) print all words/phrases and their definitions");
         System.out.println("        (6) exit");
         System.out.println("------------------------------------------");
-        System.out.print("\n请输入一个1到6之间的数字: ");
+        System.out.print("\n try enter a number !: ");
     }
 
     /////
@@ -78,19 +78,19 @@ public class DictionaryLookup {
                         handlePrintAll();
                         break;
                     case 6:
-                        System.out.println("感谢使用，再见！");
+                        System.out.println("BYE BYE");
                         break;
                     default:
-                        System.out.println("无效的输入，请输入1到6之间的数字。");
+                        System.out.println("U SHOULD ENTER A NUMBER BETWEEN 1 AND 6");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("无效的输入，请输入一个数字。");
-                choice = 0; // 重置choice以继续循环
+                System.out.println("U SHOULD ENTER A NUMBER BETWEEN 1 AND 6");
+                choice = 0;
             }
 
             if (choice != 6) {
-                System.out.println("\n按任意键继续...\n");
-                scanner.nextLine(); // 等待用户按键
+                System.out.println("PRESS ENTER TO CONTINUE");
+                scanner.nextLine(); 
             }
 
         } while (choice != 6);
@@ -99,40 +99,39 @@ public class DictionaryLookup {
     ////
     ////
     private void handleSearch() {
-        System.out.print("请输入要搜索的单词/短语: ");
+        System.out.print("what word u want search?: ");
         String word = scanner.nextLine();
         boolean found = dictionary.search(word);
-        System.out.println("单词/短语 '" + word + "' 存在于词典中: " + found);
+        System.out.println("word '" + word + "' in dict: " + found);
     }
 
     private void handlePrintItem() {
-        System.out.print("请输入要打印的单词/短语: ");
+        System.out.print("what word u want print?: ");
         String word = scanner.nextLine();
-        System.out.println(); // 换行以匹配示例输出
+        System.out.println(); 
         dictionary.printDictionaryItem(word);
     }
 
     private void handleAddItem() {
-        System.out.println("正在向词典添加条目 ...");
-        System.out.print("请输入单词/短语: ");
+        System.out.println("adding word to dict ...");
+        System.out.print("what word u want add?: ");
         String word = scanner.nextLine();
-        System.out.print("谢谢，现在请输入定义: ");
+        System.out.print("what this word mean?: ");
         String definition = scanner.nextLine();
-        dictionary.insert(word, definition); // 假设BST的insert能处理重复插入（例如，不插入或更新）
-        System.out.println("谢谢，您的条目已添加到词典中");
+        dictionary.insert(word, definition);
+        System.out.println("tq i know what this word mean now");
     }
 
     private void handleRemoveItem() {
-        System.out.println("正在从词典删除条目 ...");
-        System.out.print("请输入要删除的单词/短语: ");
+        System.out.println("forgetting word from dict ...");
+        System.out.print("what word u want me to forget?: ");
         String word = scanner.nextLine();
-        // 你可能需要先检查词条是否存在，再尝试删除，或者让remove方法处理找不到的情况
         dictionary.remove(word);
-        System.out.println("谢谢，该条目已被删除 (如果存在的话)");
+        System.out.println("tq i forgot what this word mean");
     }
 
     private void handlePrintAll() {
-        System.out.println("正在打印完整词典 ...\n");
+        System.out.println("printing everything i know ...\n");
         dictionary.printDictionary();
     }
 
